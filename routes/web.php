@@ -14,3 +14,11 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'api/v1'], function () use ($router) {
+    $router->group(['prefix' => 'escrow-transaction'], function () use ($router) {
+        $router->post('', 'EscrowTransactionController@newEscrowTransaction');
+        $router->patch('{transaction_id}', 'EscrowTransactionController@updateEscrowTransaction');
+        $router->delete('{transaction_id}', 'EscrowTransactionController@deleteEscrowTransaction');
+    });
+});
