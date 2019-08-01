@@ -11,7 +11,13 @@
 - Run `sudo chmod 777 -R ./storage`
 
 - Go to phpMyAdmin at (http://0.0.0.0:44679/)
+```
+    phpMyAdmin credential
 
+    User: root
+    Pass: secret
+
+```
 - Create a database called `vesicash`
 
 - Run `docker exec -it core bash`
