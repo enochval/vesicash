@@ -2,25 +2,25 @@
 
 - Clone repo
 
-- Run composer install
+- Run `composer install`
 
 - Copy .env.example to .env
 
-- Set database parameters on the env file
+- Run `docker-compose up -d`
 
-```
-DB_DATABASE=
-DB_USERNAME=
-DB_PASSWORD=
-```
+- Run `sudo chmod 777 -R ./storage`
 
-- Run migration
+- Go to phpMyAdmin at (http://0.0.0.0:44679/)
 
-`php artisan migrate`
+- Create a database called `vesicash`
 
-- Start application
+- Run `docker exec -it core bash`
 
-`php -S 127.0.0.1:8080`
+- Run `php artisan migrate`
+
+- Run `exit`
+
+- The Application is at (http://0.0.0.0:44678)
 
 - Note
 
